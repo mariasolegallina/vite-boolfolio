@@ -26,9 +26,7 @@ export default {
 <template>
   <div class="container-fluid py-5 d-flex flex-column justify-content-center align-items-center border">
     <div class="container py-2 text-center">
-      <h1>ciao</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tenetur repellat blanditiis, excepturi quod autem labore non vel, iure omnis odit, a nulla vitae error. Praesentium molestiae in fugiat autem!</p>
-
+      <h1>I topi non avevano nipoti</h1>
     </div>
    
   </div>
