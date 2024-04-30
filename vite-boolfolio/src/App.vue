@@ -2,6 +2,8 @@
 // Import di axios
 import axios from 'axios';
 
+import ProjectIndex from './pages/projects/index.vue';
+
 export default {
   data() {
     return {
@@ -18,22 +20,16 @@ export default {
       .catch(error => {
         console.error('Errore durante la richiesta:', error);
       });
-  }
+  },
+
+  components: {
+    ProjectIndex
+  },
 }
 </script>
 
 <template>
-  <div class="container-fluid py-5 d-flex flex-column justify-content-center align-items-center border">
-    <div class="container py-2 text-center">
-      <h1>I topi non avevano nipoti</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, vel dolorum officia sed suscipit itaque obcaecati blanditiis. Hic deleniti consectetur minima placeat. Illum ratione ab assumenda laborum impedit nesciunt aliquid?</p>
-    </div>
-    <ul>
-      <li v-for="project in projects" :key="project.id">
-        {{ project.title }}
-      </li>
-    </ul>
-  </div>
+  <ProjectIndex />
 </template>
 
 <style scoped>
