@@ -1,9 +1,28 @@
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      projects: [],
+      baseApiUrl: 'http://127.0.0.1:8000/api/'
+    }
+  },
+  mounted() {
+    axios.get(this.baseApiUrl + 'projects') 
+      .then(res => {
+        console.log(res);
+        this.projects = res.data.results;
+      })
+      .catch(error => {
+        console.error('Errore durante la richiesta:', error);
+      });
+  }
+}
+</script>
+
 <template>   
     <div>
-        <div class="container bg-dark text-light text-center py-2">
-            <h1 class="my-3 ">I miei progetti</h1>
-        </div>
-
         <div class="container bg-dark text-light text-center py-2">
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col" v-for="project in projects" :key="project.id">
@@ -29,28 +48,7 @@
 </template>
 
   
-<script>
-import axios from 'axios';
 
-export default {
-  data() {
-    return {
-      projects: [],
-      baseApiUrl: 'http://127.0.0.1:8000/api/'
-    }
-  },
-  mounted() {
-    axios.get(this.baseApiUrl + 'projects') 
-      .then(res => {
-        console.log(res);
-        this.projects = res.data.results;
-      })
-      .catch(error => {
-        console.error('Errore durante la richiesta:', error);
-      });
-  }
-}
-</script>
   
 <style scoped>
 

@@ -2,7 +2,9 @@
 // Import di axios
 // import axios from 'axios';
 
-import ProjectIndex from './pages/projects/index.vue';
+import AppHeader from './components/AppHeader.vue';
+
+
 
 export default {
   data() {
@@ -23,13 +25,19 @@ export default {
   },
 
   components: {
-    ProjectIndex
+    AppHeader,
+    
+    
   },
 }
 </script>
 
 <template>
-  <ProjectIndex />
+  <AppHeader />
+  <div class="container py-5 bg-dark"> 
+    <router-view></router-view>
+
+  </div>
 </template>
 
 <style scoped>
