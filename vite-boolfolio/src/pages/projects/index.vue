@@ -35,8 +35,9 @@ export default {
                                 <h5 class="card-title">{{ project.title }}</h5>
                                 <p class="card-text">{{ project.description }}</p>
                             </div>
-                            <div class="mt-auto">
-                                <a href="#" class="btn btn-secondary w-100">Go somewhere</a>
+                            <div class="mt-auto ">
+                              <router-link :to="{name: 'single-project', params:{id:project.id}}" class="btn btn-outline-secondary text-uppercase fw-bold" >visualizza progetto</router-link>
+                                
                             </div>
                         </div>
                     </div>
