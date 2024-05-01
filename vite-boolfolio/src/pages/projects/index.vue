@@ -11,18 +11,23 @@
 
                         <!-- DA MODIFICARE: ora viene passato il type_id -->
                         <div class="card-header" v-if="project.type_id">Categoria: {{ project.type_id }}</div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ project.title }}</h5>
-                            <p class="card-text">{{ project.description }}</p>
-                            <a href="#" class="btn btn-secondary">Go somewhere</a>
+                        <div class="card-body d-flex flex-column">
+                            <div class="mb-3">
+                                <h5 class="card-title">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.description }}</p>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-secondary w-100">Go somewhere</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </template>
+
   
 <script>
 import axios from 'axios';
