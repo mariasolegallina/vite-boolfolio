@@ -1,10 +1,10 @@
 <template>   
     <div>
-        <div class="container">
-            <h1 class="my-3">I miei progetti</h1>
+        <div class="container bg-dark text-light text-center py-2">
+            <h1 class="my-3 ">I miei progetti</h1>
         </div>
 
-        <div class="container">
+        <div class="container bg-dark text-light text-center py-2">
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col" v-for="project in projects" :key="project.id">
                     <div class="card h-100">
