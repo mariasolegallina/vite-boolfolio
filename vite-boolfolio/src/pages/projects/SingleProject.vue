@@ -44,11 +44,11 @@ export default {
           <p>{{ project.description }}</p>
         </div>
         
-        <div class="mb-3  p-2 text-center">
-          <p><strong class="text-warning">Tipo: </strong>{{ project.type.name }}</p>
+        <div v-if="project.type" class="mb-3  p-2 text-center">
+          <p><strong class="text-warning">Tipo: </strong>{{ project.type?.name }}</p>
         </div>
         
-        <div class="mb-3  p-2 text-center">
+        <div v-if="project.cover_image" class="mb-3  p-2 text-center">
           <img :src="project.cover_image" alt="Cover Image">
         </div>
       
