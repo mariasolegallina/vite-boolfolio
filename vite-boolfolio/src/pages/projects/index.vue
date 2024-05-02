@@ -28,8 +28,7 @@ export default {
                 <div class="col" v-for="project in projects" :key="project.id">
                     <div class="card h-100">
 
-                        <!-- DA MODIFICARE: ora viene passato il type_id -->
-                        <div class="card-header" v-if="project.type_id">Categoria: {{ project.type_id }}</div>
+                      <div class="card-header" v-if="project.type_id">Categoria: {{ project.type?.name }}</div>
                         <div class="card-body d-flex flex-column">
                             <div class="mb-3">
                                 <h5 class="card-title">{{ project.title }}</h5>
