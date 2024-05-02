@@ -22,35 +22,56 @@ export default {
 </script>
 
 <template>   
-    <div>
-        <div class="container bg-dark text-light text-center py-2">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col" v-for="project in projects" :key="project.id">
-                    <div class="card h-100">
+  <div class="container py-4">
 
-                      <div class="card-header" v-if="project.type_id">Categoria: {{ project.type?.name }}</div>
-                        <div class="card-body d-flex flex-column">
-                            <div class="mb-3">
-                                <h5 class="card-title">{{ project.title }}</h5>
-                                <p class="card-text">{{ project.description }}</p>
-                            </div>
-                            <div class="mt-auto ">
-                              <router-link :to="{name: 'single-project', params:{id:project.id}}" class="btn btn-outline-secondary text-uppercase fw-bold" >visualizza progetto</router-link>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <h1 class="mb-4">I miei progetti</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" v-for="project in projects" :key="project.id">
+
+        <!-- card -->
+        <div class="card h-100">
+
+          <div class="card-header" v-if="project.type_id">Categoria: {{ project.type?.name }}</div>
+
+          <!-- immagine -->
+          <router-link :to="{name: 'single-project', params:{id:project.id}}" class="p-title fs-4 text-decoration-none" >
+            <div v-if="project.cover_image" class="image-container">
+            <img :src="project.cover_image" class="card-img-top img-fluid" alt="Cover Image">
+          </div>
+          </router-link>
+
+          <div class="card-body d-flex flex-column">
+            <div class="mb-3">
+              <router-link :to="{name: 'single-project', params:{id:project.id}}" class="p-title fs-4 text-decoration-none" >{{ project.title }}</router-link>
+              <p class="card-text">{{ project.description }}</p>
             </div>
+          </div>
         </div>
-
+      </div>
     </div>
+  </div>
+
 </template>
 
   
 
   
-<style scoped>
+<style lang = scss scoped>
 
-    
+.image-container {
+  max-width: 100%;
+  height: auto;
+}
+
+.p-title {
+
+  color: #EFB831;
+
+  &:hover {
+  color: #f4d483;
+}
+
+}
+
 </style>
