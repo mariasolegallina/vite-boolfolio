@@ -11,7 +11,7 @@ export default {
         <nav>
             <div class="container bg-dark text-light text-center py-2">
             <h1 class="my-3 ">I miei progetti</h1>
-            <router-link to="{name:'contact-me'}">Contattami</router-link>
+            <router-link :to="{ name: 'new-contact' }">Contattami</router-link>
         </div>
         </nav>
     </header>

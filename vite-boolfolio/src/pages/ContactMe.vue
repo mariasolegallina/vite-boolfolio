@@ -1,23 +1,21 @@
 <script>
+import ContactForm from '/src/components/ContactForm.vue'
 export default {
-
+    components: {
+        ContactForm
+    }
 }
 </script>
 
 <template>
-    <div class="section">
-        <div class="container py-4">
-            <h1>Contattami</h1>
-            <form action="">
 
+<div class="container">
 
-            </form>
+    <ContactForm></ContactForm>
+</div>
 
-        </div>
-
-    </div>
 </template>
 
-<style lang="scss">
 
+<style lang="scss">
 </style>
