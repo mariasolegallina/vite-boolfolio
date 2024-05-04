@@ -50,10 +50,12 @@ export default {
             </div>
 
             <button type="submit" class="btn btn-primary">Invia</button>
+             <!-- provvisorio per visionare messaggio dopol'invio dei dati, da correggere! -->
+            <span v-if="submitSuccess !== null" class="text-success ms-5">Messaggio inviato con successo!</span>
+            
         </form>
-
-        <!-- provvisorio per visionare messaggio dopol'invio dei dati, da correggere! -->
-        <p v-if="submitSuccess !== null" class="text-success">Messaggio inviato con successo!</p>
+        
+       
 
 
         <div class="container  text-end p-0">
